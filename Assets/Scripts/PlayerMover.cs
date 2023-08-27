@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour {
     public static PlayerMover Instance;
 
-    public Cinemachine.CinemachineTrackedDolly[] tracks;
+    public CinemachineTrackedDolly[] tracks;
 
     public CinemachineVirtualCamera cam;
     private CinemachineTrackedDolly dolly;
 
-    private Stack<Transform> lastTracks = new Stack<Transform>();
+    // private Stack<Transform> lastTracks = new Stack<Transform>();
     bool isBack = false;
     private float targetPosition;
 
@@ -29,8 +29,14 @@ public class PlayerMover : MonoBehaviour {
             // dolly.m_PathPosition = !isBack ? 1 : 0;
         }
         if (Input.GetKeyDown(KeyCode.Backspace)) {
-            if (lastTracks.Count <= 0) return;
-            ChangeTrack(lastTracks.Pop(), true);
+            // if (lastTracks.Count <= 0) return;
+            // ChangeTrack(lastTracks.Pop(), true);
+            cam.LookAt = null;
+        }
+        float rot = Input.GetAxisRaw("Horizontal");
+        if (rot != 0) {
+            cam.LookAt = null;
+            cam.transform.Rotate(Vector3.up * 15 * rot);
         }
     }
 
@@ -46,11 +52,11 @@ public class PlayerMover : MonoBehaviour {
         var path = trackTransform.GetComponent<CinemachineSmoothPath>();
         dolly.m_PathPosition = isBack ? 1 : 0;
         dolly.m_Path = path;
-        cam.LookAt = trackTransform.GetChild(0);
+        cam.LookAt = trackTransform.GetChild(isBack ? 1 : 0);
         cam.Priority = 10;
         if (!isBack) {
             // dolly.m_PathPosition = 1;
-            lastTracks.Push(trackTransform);
+            // lastTracks.Push(trackTransform);
         }
         dolly.m_PathPosition = isBack ? 0 : 1;
     }
