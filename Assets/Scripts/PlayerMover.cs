@@ -5,10 +5,9 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour {
     public static PlayerMover Instance;
 
-    public CinemachineTrackedDolly[] tracks;
-
     public CinemachineVirtualCamera cam;
-    private CinemachineTrackedDolly dolly;
+    public CinemachineTrackedDolly dolly;
+    public CinemachineSmoothPath[] paths;
 
     // private Stack<Transform> lastTracks = new Stack<Transform>();
     bool isBack = false;
@@ -21,6 +20,10 @@ public class PlayerMover : MonoBehaviour {
     void Start() {
         // cam = GetComponent<CinemachineVirtualCamera>();
         dolly = cam.GetCinemachineComponent<CinemachineTrackedDolly>();
+        foreach (CinemachineSmoothPath path in paths) {
+            path.GetComponentInChildren<CinemachineVirtualCamera>().Priority = 0;
+        }
+        cam.Priority = 10;
     }
 
     private void Update() {
