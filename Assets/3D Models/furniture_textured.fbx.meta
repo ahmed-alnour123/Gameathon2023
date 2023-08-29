@@ -3,7 +3,67 @@ guid: 6054a7ef3f0024c8f8dc05395a2b3da8
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FABRIC
+    second: {fileID: 2100000, guid: 2f4cbdb2cf4d856cd882ffd6ce35351a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FABRIC.001
+    second: {fileID: 2100000, guid: 567bcb001c072dd0085913ec8961fc67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 26701c6a22de8808193ee144441538ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: carpet
+    second: {fileID: 2100000, guid: 80b4e558e3ed64fc2968191b5707bc94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: carpet.001
+    second: {fileID: 2100000, guid: 818bfd00a0f7a13698280048eafe6180, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: carpet2
+    second: {fileID: 2100000, guid: 224bab50809fb222dbafa3a963798878, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cushion
+    second: {fileID: 2100000, guid: 1e3d123464ef7d740b0b6465560b4b9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fabric
+    second: {fileID: 2100000, guid: 628869ca453e00c9f8f3f74b4cbadd18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fire
+    second: {fileID: 2100000, guid: 72cea7ef822c137c885bddbd0046c92c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 21bdaa9f72ddfb9b19f3df833e00966b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp
+    second: {fileID: 2100000, guid: 234c3ccb55aa5316c8a2b01ad1b3c172, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood
+    second: {fileID: 2100000, guid: 14207cfea7782b6a782dbd3ae8c38efd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
